@@ -102,6 +102,15 @@ const DEV_DATA: Dev[] = [
         bio: "Full-Stack Web Developer & Sui Blockchain Builder.",
         slushWallet: "0x2290bae249486a402698286c85d57ff46d27bf79ad706543d84646ef03a00362",
     },
+    {
+        name: "Tuong Huynh",
+        username: "huynhdieutuong",
+        avatar: "/avatar/huynhdieutuong.jpeg",
+        github: "https://github.com/huynhdieutuong",
+        linkedin: "https://www.linkedin.com/in/huynhdieutuong/",
+        bio: "Fullstack Web Developer",
+        slushWallet: "0x3fdc826759d7aa26ca82777624f7adffd4b23be8a05c175fcfa3e2d47e77d719",
+    },
 ];
 
 export default DEV_DATA;
