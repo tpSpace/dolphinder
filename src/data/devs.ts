@@ -59,14 +59,26 @@ const DEV_DATA: Dev[] = [
         website: "https://mikejohnson.dev",
         bio: "Mike Johnson is a DevOps engineer and cloud architecture expert.",
         slushWallet: "0x5678901234567890123456789012345678901234",
-    },   {
+    },
+    {
         name: "Hulk",
         username: "hulk",
         avatar: "/avatar/hulk-avatar.png",
         github: "https://github.com/Huc06",
         linkedin: "https://www.linkedin.com/in/hulk-phuc-ha-84a685301/",
         bio: "This product offers a unique solution to a common problem.",
-        slushWallet: "0xaea6f58e4261b34032934c6c20e0b5b4fd94bac2e86734e3f2d3d5856b443108",
+        slushWallet:
+            "0xaea6f58e4261b34032934c6c20e0b5b4fd94bac2e86734e3f2d3d5856b443108",
+    },
+    {
+        name: "Dang Hoang Lam",
+        username: "lamdanghoang",
+        avatar: "https://avatars.githubusercontent.com/u/82764011?v=4",
+        github: "https://github.com/lamdanghoang",
+        linkedin: "https://www.linkedin.com/in/hoang-lam-dang-411aa7160/",
+        bio: "Become a blockchain developer",
+        slushWallet:
+            "0x0794b3451c2fe7c83f7c4a105d412d23b9e79935ec8583af60e48f40566c0fdc",
     },
 ];
 
