@@ -20,6 +20,15 @@ const DEV_DATA: Dev[] = [
         slushWallet: "0xaea6f58e4261b34032934c6c20e0b5b4fd94bac2e86734e3f2d3d5856b443108",
     },
     {
+        name: "Viet Hieu Dinh",
+        username: "hieudepoet",
+        avatar: "/avatar/hulk-avatar.png",
+        github: "https://github.com/hieudepoet",
+        linkedin: "https://www.linkedin.com/in/hieudepoet/",
+        bio: "A relentless coder and football aficionado, dedicated to mastering both the digital and physical fields. Always striving for excellence and innovation.",
+        slushWallet: "0x2cbd7fabd5ce146e0e48ca754a4c6c88e6cdbfa4bb2ca1beaabd5ea00c97bf9c",    
+    },
+    {
         name: "Alvin Ichi",
         username: "alvin-ichi",
         avatar: "https://avatars.githubusercontent.com/u/48800728?s=96&v=4",
