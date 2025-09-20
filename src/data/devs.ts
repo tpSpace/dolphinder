@@ -22,7 +22,7 @@ const DEV_DATA: Dev[] = [
     {
         name: "Viet Hieu Dinh",
         username: "hieudepoet",
-        avatar: "/avatar/hulk-avatar.png",
+        avatar: "https://avatars.githubusercontent.com/u/59277071?v=4",
         github: "https://github.com/hieudepoet",
         linkedin: "https://www.linkedin.com/in/hieudepoet/",
         bio: "A relentless coder and football aficionado, dedicated to mastering both the digital and physical fields. Always striving for excellence and innovation.",
