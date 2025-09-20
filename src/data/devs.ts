@@ -68,6 +68,16 @@ const DEV_DATA: Dev[] = [
         bio: "This product offers a unique solution to a common problem.",
         slushWallet: "0xaea6f58e4261b34032934c6c20e0b5b4fd94bac2e86734e3f2d3d5856b443108",
     },
+    {
+        name: "Hữu Bảo",
+        username: "huubao",
+        avatar: "/avatar/huubao-avatar.jpg",
+        github: "https://github.com/lehuubao1810",
+        linkedin: "https://www.linkedin.com/in/lehuubao2909/",
+        website: "https://lehuubao.vercel.app",
+        bio: "I'm a Junior Developer with experience in React, Node.js, Next.js, and React Native. I'm passionate about expanding my skills in Web3 development.",
+        slushWallet: "0xd21bc08c287ac02a995e00c121778e7c4d384547ed10e7940994157230d982d7",
+    },
 ];
 
 export default DEV_DATA;
