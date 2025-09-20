@@ -1,12 +1,12 @@
 type Dev = {
-    name: string;
-    username: string;
-    avatar?: string;
-    github: string;
-    linkedin?: string;
-    website?: string;
-    bio?: string;
-    slushWallet?: string;
+  name: string;
+  username: string;
+  avatar?: string;
+  github: string;
+  linkedin?: string;
+  website?: string;
+  bio?: string;
+  slushWallet?: string;
 };
 
 const DEV_DATA: Dev[] = [
