@@ -74,6 +74,16 @@ const DEV_DATA: Dev[] = [
         bio: "I'm a Junior Developer with experience in React, Node.js, Next.js, and React Native. I'm passionate about expanding my skills in Web3 development.",
         slushWallet: "0xd21bc08c287ac02a995e00c121778e7c4d384547ed10e7940994157230d982d7",
     },
+    {
+        name: "Khoi Nguyen",
+        username: "MrOctopus",
+        avatar: "/avatar/khoi.jpg",
+        github: "https://github.com/tpSpace",
+        linkedin: "https://www.linkedin.com/in/nmvkhoi/",
+        bio: "Never Settle - Eager to learn new things.",
+        slushWallet:
+            "0x903d678b7972c31068cf49e76981754074fe609e7c9f5e6a70d3fe7a0aa77fb2",
+    },
 ];
 
 export default DEV_DATA;
