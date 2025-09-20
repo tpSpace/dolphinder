@@ -1,12 +1,12 @@
 type Dev = {
-  name: string;
-  username: string;
-  avatar?: string;
-  github: string;
-  linkedin?: string;
-  website?: string;
-  bio?: string;
-  slushWallet?: string;
+    name: string;
+    username: string;
+    avatar?: string;
+    github: string;
+    linkedin?: string;
+    website?: string;
+    bio?: string;
+    slushWallet?: string;
 };
 
 const DEV_DATA: Dev[] = [
@@ -26,7 +26,7 @@ const DEV_DATA: Dev[] = [
         github: "https://github.com/hieudepoet",
         linkedin: "https://www.linkedin.com/in/hieudepoet/",
         bio: "A relentless coder and football aficionado, dedicated to mastering both the digital and physical fields. Always striving for excellence and innovation.",
-        slushWallet: "0x2cbd7fabd5ce146e0e48ca754a4c6c88e6cdbfa4bb2ca1beaabd5ea00c97bf9c",    
+        slushWallet: "0x2cbd7fabd5ce146e0e48ca754a4c6c88e6cdbfa4bb2ca1beaabd5ea00c97bf9c",
     },
     {
         name: "Alvin Ichi",
@@ -45,6 +45,24 @@ const DEV_DATA: Dev[] = [
         linkedin: "https://www.linkedin.com/in/ph%E1%BA%A1m-ph%C3%BAc-34164b211/",
         bio: "I am a third-year university student passionate about Web3 and blockchain.",
         slushWallet: "0x3161f4083d09983b4fc68ea208bd2ea3616f1bf91e8fd9c5303552d5aa64af19",
+    },
+    {
+        name: "Hoang Son",
+        username: "Yi",
+        avatar: "/avatar/Yi-avatar.png",
+        github: "https://github.com/sonmessia",
+        linkedin: "https://www.linkedin.com/in/mike-johnson",
+        bio: "Backend | Passionate about blockchain, AI, and scalable systems.",
+        slushWallet: "0x5678901234567890123456789012345678901234",
+    },
+    {
+        name: "BLAN39",
+        username: "AlairlacuaBlan",
+        avatar: "/avatar/AlairlacuaBlan.jpeg",
+        github: "https://github.com/AlairlacuaBlan",
+        linkedin: "https://www.linkedin.com/in/%C4%91%C3%ACnh-sang-b1a968261/",
+        bio: "Man of Means",
+        slushWallet: "0x93daa4636ad94275bf5a13521dcba01f5e93e66a3fe10a06dc7e96156f5864e1",
     },
 ];
 
