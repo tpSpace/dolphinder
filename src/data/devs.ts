@@ -84,6 +84,15 @@ const DEV_DATA: Dev[] = [
         slushWallet:
             "0x903d678b7972c31068cf49e76981754074fe609e7c9f5e6a70d3fe7a0aa77fb2",
     },
+    {
+        name: "DKhoi",
+        username: "ngo-d-khoi",
+        avatar: "https://github.com/mike-johnson.png",
+        github: "https://github.com/NgoDKhoi",
+        linkedin: "https://www.linkedin.com/in/kh%C3%B4i-ng%C3%B4-737259336/",
+        bio: "Sinh vien , newbie",
+        slushWallet: "0x1584820bde6795d377e660080eb928934f1e24a0351e279205bbb6471c004025",
+    },
 ];
 
 export default DEV_DATA;
