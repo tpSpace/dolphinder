@@ -14,10 +14,12 @@ Dolphinder là một nền tảng hiển thị thông tin developer với giao d
 ## 🚀 Cài đặt và chạy dự án
 
 ### Yêu cầu hệ thống
-- Node.js 18+ 
+
+- Node.js 18+
 - pnpm (khuyến nghị) hoặc npm
 
 ### Cài đặt
+
 ```bash
 # Clone repository
 git clone <repository-url>
@@ -28,6 +30,7 @@ pnpm install
 ```
 
 ### Chạy dự án
+
 ```bash
 # Chạy development server
 pnpm dev
@@ -104,6 +107,7 @@ Mở file `src/data/devs.ts` và thêm thông tin developer mới vào mảng `D
 ### 4. Kiểm tra kết quả
 
 Sau khi thêm thông tin:
+
 1. Chạy `pnpm dev`
 2. Truy cập `http://localhost:4321` để xem danh sách developers
 3. Truy cập `http://localhost:4321/username` để xem trang cá nhân
@@ -111,10 +115,12 @@ Sau khi thêm thông tin:
 ## 🎨 Tùy chỉnh giao diện
 
 ### Thay đổi CSS
+
 - Chỉnh sửa file `src/styles/global.css` để thay đổi style toàn cục
 - Sử dụng Tailwind CSS classes trong các component
 
 ### Thay đổi layout
+
 - Chỉnh sửa `src/layout.astro` để thay đổi layout chung
 - Chỉnh sửa `src/pages/[username]/index.astro` để thay đổi layout trang cá nhân
 

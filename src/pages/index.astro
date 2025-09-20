@@ -20,15 +20,15 @@ import { Github, Linkedin, Globe, User } from "@lucide/astro";
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {DEV_DATA.map((dev) => (
-          <a 
+          <a
             href={`/${dev.username}`}
             class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 hover:bg-white/15 hover:border-purple-400/50 transition-all duration-300 group"
           >
             <!-- Avatar -->
             <div class="flex items-center space-x-4 mb-4">
               {dev.avatar ? (
-                <img 
-                  src={dev.avatar} 
+                <img
+                  src={dev.avatar}
                   alt={`${dev.name} avatar`}
                   class="w-16 h-16 rounded-full border-2 border-white/20 object-cover"
                 />
@@ -38,7 +38,9 @@ import { Github, Linkedin, Globe, User } from "@lucide/astro";
                 </div>
               )}
               <div>
-                <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">{dev.name}</h3>
+                <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                  {dev.name}
+                </h3>
                 <p class="text-purple-300">@{dev.username}</p>
               </div>
             </div>
