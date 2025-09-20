@@ -111,6 +111,16 @@ const DEV_DATA: Dev[] = [
         bio: "Fullstack Web Developer",
         slushWallet: "0x3fdc826759d7aa26ca82777624f7adffd4b23be8a05c175fcfa3e2d47e77d719",
     },
+    {
+        name: "Dang Hoang Lam",
+        username: "lamdanghoang",
+        avatar: "https://avatars.githubusercontent.com/u/82764011?v=4",
+        github: "https://github.com/lamdanghoang",
+        linkedin: "https://www.linkedin.com/in/hoang-lam-dang-411aa7160/",
+        bio: "Become a blockchain developer",
+        slushWallet:
+            "0x0794b3451c2fe7c83f7c4a105d412d23b9e79935ec8583af60e48f40566c0fdc",
+    },
 ];
 
 export default DEV_DATA;
