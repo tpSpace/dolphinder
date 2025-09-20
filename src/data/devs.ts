@@ -59,6 +59,14 @@ const DEV_DATA: Dev[] = [
         website: "https://mikejohnson.dev",
         bio: "Mike Johnson is a DevOps engineer and cloud architecture expert.",
         slushWallet: "0x5678901234567890123456789012345678901234",
+    },   {
+        name: "Hulk",
+        username: "hulk",
+        avatar: "/avatar/hulk-avatar.png",
+        github: "https://github.com/Huc06",
+        linkedin: "https://www.linkedin.com/in/hulk-phuc-ha-84a685301/",
+        bio: "This product offers a unique solution to a common problem.",
+        slushWallet: "0xaea6f58e4261b34032934c6c20e0b5b4fd94bac2e86734e3f2d3d5856b443108",
     },
 ];
 
