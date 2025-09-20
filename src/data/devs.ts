@@ -61,7 +61,7 @@ const DEV_DATA: Dev[] = [
     slushWallet: "0x5678901234567890123456789012345678901234",
   },
   {
-    name: "Son",
+    name: "Hoang Son",
     username: "Yi",
     avatar: "/avatar/Yi-avatar.png",
     github: "https://github.com/sonmessia",
