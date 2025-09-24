@@ -10,7 +10,7 @@ import {
   Copy,
 } from "@lucide/astro";
 
-import Layout from "../../layout.astro";
+import MainLayout from "../../components/MainLayout.astro";
 
 export function getStaticPaths() {
   // Generate static paths from the devs data
@@ -23,7 +23,7 @@ export function getStaticPaths() {
 const { dev } = Astro.props;
 ---
 
-<Layout title={`${dev.name} - Developer Profile`}>
+<MainLayout title={`${dev.name} - Developer Profile`}>
   <div
     class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
   >
@@ -192,4 +192,4 @@ const { dev } = Astro.props;
       <p>Built with ❤️ using Astro & Tailwind CSS</p>
     </footer>
   </div>
-</Layout>
+</MainLayout>

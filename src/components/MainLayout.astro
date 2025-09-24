@@ -1,5 +1,6 @@
 ---
-import "./styles/global.css";
+import "../styles/global.css";
+import App from "./App.tsx";
 
 export interface Props {
   title?: string;
@@ -16,7 +17,9 @@ const { title = "Astro" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="dark">
+    <App client:only="react">
+      <slot />
+    </App>
   </body>
 </html>
