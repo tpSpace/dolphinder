@@ -147,7 +147,7 @@ Phần thưởng gửi **trực tiếp bằng USDC trên Sui** – công bố ng
 | Giai đoạn         | Thời gian                                    |
 | ----------------- | -------------------------------------------- |
 | 🚀 Bắt đầu         | 22/10/2025                                   |
-| 🛠 Nộp bài         | 25/11/2025 (demo trưa thứ 7 tại SuiHub HCMC) |
+| 🛠 Nộp bài         | 25/10/2025 (demo trưa thứ 7 tại SuiHub HCMC) |
 | 🏁 Công bố kết quả | 5/11/2025                                    |
 
 ---
