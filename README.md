@@ -1,155 +1,182 @@
-# Dolphinder 🐬
+# 🧱 Sui Builder Challenge — DOLPHINDER
 
-Dolphinder là một nền tảng hiển thị thông tin developer với giao diện đẹp mắt và hiện đại. Mỗi developer sẽ có một trang cá nhân riêng với đầy đủ thông tin liên hệ và portfolio.
+### 🧠 Build your on-chain developer profile, showcase your projects, and prove your skills on Sui.
 
-## ✨ Tính năng
+> Powered by **Sui** 🪙 + **Walrus** 🧊 + **Sponsored Gas** ⛽  
+> Hosted by **SuiHub APAC**
 
-- 🎨 Giao diện hiện đại với Tailwind CSS
-- 👤 Trang cá nhân cho từng developer
-- 🔗 Tích hợp các mạng xã hội (GitHub, LinkedIn, Website)
-- 💰 Hỗ trợ Slush Wallet
-- 📱 Responsive design
-- ⚡ Xây dựng với Astro - nhanh và SEO-friendly
+---
 
-## 🚀 Cài đặt và chạy dự án
+## 🎯 Mục tiêu Cuộc Thi
+**Dolphinder** là dự án mẫu cho dev Web3:
+- Tạo **on-chain developer profile** trực tiếp trên Sui.  
+- Showcase **dự án cá nhân** (project cards với hình ảnh, video, link).  
+- Đăng **chứng chỉ / thành tích** (self-issued certificates).  
+- Lưu hình ảnh vĩnh viễn bằng **Walrus**.  
+- Không cần backend, không tốn gas – dùng **Sponsored Transactions**.  
+- Có thể được **xác thực (verified)** bởi admin/community.  
 
-### Yêu cầu hệ thống
+---
 
-- Node.js 18+
-- pnpm (khuyến nghị) hoặc npm
+## 🧩 Tính năng yêu cầu
+| Thành phần              | Mô tả                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------- |
+| 👤 **Developer Profile** | Lưu on-chain: name, bio, social links, avatar/banner (Walrus), verified badge ✅ |
+| 🚀 **Project Showcase**  | Dự án cá nhân: hình ảnh, video, mô tả, demo link — tất cả on-chain              |
+| 🎓 **Certificates**      | Builder tự đăng chứng chỉ hoặc thành tích (self-issued certificates)            |
+| ✅ **Verification**      | Admin xác thực builder (verified badge)                                         |
+| 🧊 **Walrus Storage**    | Lưu hình ảnh, video thumbnail, certificate scan vĩnh viễn                       |
+| ⛽ **Sponsored Gas**     | User publish/update mà không cần SUI trong ví                                   |
 
-### Cài đặt
+---
 
-```bash
-# Clone repository
-git clone <repository-url>
-cd dolphinder
+## ⚙️ Yêu cầu kỹ thuật
+- **Frontend:** Astro + React + Tailwind  
+- **Blockchain:** Sui testnet  
+- **Smart Contract:** Move  
+- **Storage:** Walrus (permanent)  
+- **Wallet:** Sui Wallet / Suiet / Ethos  
+- **Sponsored Gas:** MystenLabs sponsored API  
 
-# Cài đặt dependencies
-pnpm install
+---
+
+## 🧱 Cấu trúc dự án (Gợi ý)
+```
+src/
+ ├─ components/
+ │   ├─ ProfileCard.tsx
+ │   ├─ ProjectCard.tsx
+ │   ├─ CertificateCard.tsx
+ │   ├─ EditProfileForm.tsx
+ │   ├─ AddProjectForm.tsx
+ │   ├─ AddCertificateForm.tsx
+ │   └─ WalletConnect.tsx
+ ├─ lib/
+ │   ├─ sui.ts
+ │   ├─ walrus.ts
+ │   └─ sponsor.ts
+ ├─ pages/
+ │   ├─ index.astro
+ │   ├─ profile/[address].astro
+ │   ├─ edit.astro
+ │   ├─ add-project.astro
+ │   ├─ add-certificate.astro
+ │   └─ verify.astro
+move/
+ └─ dolphinder_profiles/
+     ├─ sources/profiles.move
+     └─ Move.toml
 ```
 
-### Chạy dự án
+---
 
-```bash
-# Chạy development server
-pnpm dev
+## 🧊 Upload Media với Walrus (Gợi ý)
+```ts
+import { WalrusClient } from "@mysten/walrus.js";
+const client = new WalrusClient({ network: "testnet" });
 
-# Build cho production
-pnpm build
-
-# Preview build
-pnpm preview
-```
-
-Dự án sẽ chạy tại `http://localhost:4321`
-
-## 📁 Cấu trúc dự án
-
-```
-dolphinder/
-├── public/
-│   └── avatar/          # Thư mục chứa avatar của developers
-├── src/
-│   ├── data/
-│   │   └── devs.ts      # File chứa dữ liệu developers
-│   ├── pages/
-│   │   ├── index.astro  # Trang chủ
-│   │   └── [username]/  # Trang cá nhân của developer
-│   │       └── index.astro
-│   ├── styles/
-│   │   └── global.css   # CSS toàn cục
-│   └── layout.astro     # Layout chính
-├── astro.config.mjs     # Cấu hình Astro
-└── package.json
-```
-
-## 👥 Cách thêm thông tin developer
-
-### 1. Thêm thông tin vào file `src/data/devs.ts`
-
-Mở file `src/data/devs.ts` và thêm thông tin developer mới vào mảng `DEV_DATA`:
-
-```typescript
-{
-    name: "Tên đầy đủ",
-    username: "username-unique", // Sẽ tạo URL: /username-unique
-    avatar: "/avatar/ten-avatar.png", // Đường dẫn đến file avatar
-    github: "https://github.com/username",
-    linkedin: "https://www.linkedin.com/in/username", // Tùy chọn
-    website: "https://website-ca-nhan.com", // Tùy chọn
-    bio: "Mô tả ngắn về bản thân và công việc",
-    slushWallet: "0x...", // Địa chỉ ví Slush (tùy chọn)
+export async function uploadToWalrus(file: File): Promise<string> {
+  const { reference } = await client.upload(file);
+  return reference; // wal://0xabc123...
 }
 ```
 
-### 2. Thêm avatar vào thư mục `public/avatar/`
+---
 
-- Tải ảnh avatar của bạn vào thư mục `public/avatar/`
-- Đặt tên file theo format: `username-avatar.png` (ví dụ: `john-doe-avatar.png`)
-- Cập nhật đường dẫn trong trường `avatar` của dữ liệu
+## ⛽ Sponsored Gas API (Gợi ý)
+```ts
+import { Transaction } from "@mysten/sui.js";
 
-### 3. Ví dụ hoàn chỉnh
-
-```typescript
-{
-    name: "Nguyễn Văn A",
-    username: "nguyen-van-a",
-    avatar: "/avatar/nguyen-van-a-avatar.png",
-    github: "https://github.com/nguyen-van-a",
-    linkedin: "https://www.linkedin.com/in/nguyen-van-a",
-    website: "https://nguyenvana.dev",
-    bio: "Full-stack developer với 5 năm kinh nghiệm trong React và Node.js. Đam mê về blockchain và AI.",
-    slushWallet: "0x1234567890123456789012345678901234567890",
+export async function sendSponsoredTx(wallet, tx) {
+  const kindBytes = await tx.build({ onlyTransactionKind: true });
+  const userSig = await wallet.signData(kindBytes);
+  const res = await fetch("https://sponsor.sui.io/api/sponsor", {
+    method: "POST",
+    body: JSON.stringify({
+      kindBytes: Buffer.from(kindBytes).toString("base64"),
+      userSig,
+      pubKey: wallet.publicKey(),
+    }),
+  });
+  return await res.json();
 }
 ```
 
-### 4. Kiểm tra kết quả
+---
 
-Sau khi thêm thông tin:
+## 🖥 Trang UI cần có
+| Trang             | Chức năng                                           |
+| ----------------- | --------------------------------------------------- |
+| 🏠 Home            | Danh sách builder + verified badge                  |
+| 👤 Profile         | Thông tin cá nhân + project showcase + certificates |
+| ✏️ Edit Profile    | Form cập nhật hồ sơ                                 |
+| 🚀 Add Project     | Form thêm dự án                                     |
+| 🎓 Add Certificate | Form thêm chứng chỉ                                 |
+| 🧑‍💼 Admin Verify    | Trang xác thực builder                              |
 
-1. Chạy `pnpm dev`
-2. Truy cập `http://localhost:4321` để xem danh sách developers
-3. Truy cập `http://localhost:4321/username` để xem trang cá nhân
+---
 
-## 🎨 Tùy chỉnh giao diện
+## 🧠 Checklist Merge
+| Hạng mục                     | Trạng thái |
+| ---------------------------- | ---------- |
+| Move module hoạt động        | ☐          |
+| Form hồ sơ, dự án, chứng chỉ | ☐          |
+| Walrus upload OK             | ☐          |
+| Sponsored gas OK             | ☐          |
+| README cập nhật              | ☐          |
+| Test E2E                     | ☐          |
 
-### Thay đổi CSS
+---
 
-- Chỉnh sửa file `src/styles/global.css` để thay đổi style toàn cục
-- Sử dụng Tailwind CSS classes trong các component
+## 🏆 Giải thưởng (Tổng cộng 100 USDC)
 
-### Thay đổi layout
+| Hạng mục                    | Giải thưởng | Mô tả                                             |
+| --------------------------- | ----------- | ------------------------------------------------- |
+| 🥇 **Best On-chain Profile** | **40 USDC** | Profile + Projects + Certificates + Sponsored Gas |
+| 🥈 **Best UI/UX**            | **25 USDC** | Giao diện đẹp, hiển thị rõ ràng                   |
+| 🥉 **Best Move Contract**    | **20 USDC** | Module Move rõ ràng, chuẩn và an toàn             |
+| 💡 **Innovation Award**      | **15 USDC** | Tính năng sáng tạo (badges, score, reputation...) |
 
-- Chỉnh sửa `src/layout.astro` để thay đổi layout chung
-- Chỉnh sửa `src/pages/[username]/index.astro` để thay đổi layout trang cá nhân
+💰 Tổng: **100 USDC**  
+Phần thưởng gửi **trực tiếp bằng USDC trên Sui** – công bố ngày **08/11/2025**.
 
-## 🛠️ Công nghệ sử dụng
+---
 
-- **Astro** - Framework web hiện đại
-- **Tailwind CSS** - Utility-first CSS framework
-- **TypeScript** - Type safety
-- **Lucide Icons** - Icon library
+## 📅 Timeline
 
-## 📝 Lưu ý quan trọng
+| Giai đoạn         | Thời gian                                    |
+| ----------------- | -------------------------------------------- |
+| 🚀 Bắt đầu         | 22/10/2025                                   |
+| 🛠 Nộp bài         | 25/11/2025 (demo trưa thứ 7 tại SuiHub HCMC) |
+| 🏁 Công bố kết quả | 5/11/2025                                    |
 
-1. **Username phải unique**: Mỗi username sẽ tạo ra một URL riêng
-2. **Avatar format**: Khuyến nghị sử dụng PNG với kích thước 400x400px
-3. **Slush Wallet**: Là địa chỉ ví để nhận tiền tip (tùy chọn)
-4. **Bio**: Nên viết ngắn gọn, súc tích trong 1-2 câu
+---
 
-## 🤝 Đóng góp
+## 💬 Cách Tham Gia
 
-1. Fork dự án
-2. Tạo branch mới (`git checkout -b feature/amazing-feature`)
-3. Commit thay đổi (`git commit -m 'Add some amazing feature'`)
-4. Push lên branch (`git push origin feature/amazing-feature`)
-5. Tạo Pull Request
+1. Fork repo 👉 [https://github.com/terrancrypt/dolphinder](https://github.com/terrancrypt/dolphinder)  
+2. Build hoặc mở rộng tính năng (frontend + Move).  
+3. Gửi Pull Request + screenshot/demo link.  
+4. Đăng tweet giới thiệu dự án kèm hashtag (nếu có dùng X)
 
-## 📄 License
+   **`#SuiBuilderChallenge #Dolphinder #SuiHubAPAC @terrancrypt @SuiHubAPAC`**  
 
-Dự án này được phân phối dưới MIT License. Xem file `LICENSE` để biết thêm chi tiết.
+---
 
-## 📞 Liên hệ
+## 🔗 Tài nguyên
 
-Nếu có câu hỏi hoặc góp ý, vui lòng tạo issue trên GitHub hoặc liên hệ qua email.
+| Chủ đề                   | Link                                                             |
+| ------------------------ | ---------------------------------------------------------------- |
+| 📘 Sui Docs               | https://docs.sui.io                                              |
+| 🧊 Walrus                 | https://walrus.site                                              |
+| ⛽ Sponsored Transactions | https://docs.sui.io/concepts/transactions/sponsored-transactions |
+| 💻 Sui SDK JS             | https://sdk.mystenlabs.com/typescript                            |
+
+---
+
+## 🚀 Lời kết
+
+> **DOLPHINDER** – Nơi bạn có thể chứng minh năng lực thật của mình,  
+> qua hồ sơ, dự án, và thành tích — tất cả **on-chain**.  
+
+**Build. Prove. Verify. On Sui.**
