@@ -1,6 +1,6 @@
 # 🧱 Sui Builder Challenge — DOLPHINDER
 
-### 🧠 Build your on-chain developer profile, showcase your projects, and prove your skills on Sui.
+## 🧠 Build your on-chain developer profile, showcase your projects, and prove your skills on Sui.
 
 > Powered by **Sui** 🪙 + **Walrus** 🧊 + **Sponsored Gas** ⛽  
 > Hosted by **SuiHub APAC**
@@ -8,7 +8,9 @@
 ---
 
 ## 🎯 Mục tiêu Cuộc Thi
+
 **Dolphinder** là dự án mẫu cho dev Web3:
+
 - Tạo **on-chain developer profile** trực tiếp trên Sui.  
 - Showcase **dự án cá nhân** (project cards với hình ảnh, video, link).  
 - Đăng **chứng chỉ / thành tích** (self-issued certificates).  
@@ -19,6 +21,7 @@
 ---
 
 ## 🧩 Tính năng yêu cầu
+
 | Thành phần              | Mô tả                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------- |
 | 👤 **Developer Profile** | Lưu on-chain: name, bio, social links, avatar/banner (Walrus), verified badge ✅ |
@@ -31,6 +34,7 @@
 ---
 
 ## ⚙️ Yêu cầu kỹ thuật
+
 - **Frontend:** Astro + React + Tailwind  
 - **Blockchain:** Sui testnet  
 - **Smart Contract:** Move  
@@ -41,7 +45,8 @@
 ---
 
 ## 🧱 Cấu trúc dự án (Gợi ý)
-```
+
+```bash
 src/
  ├─ components/
  │   ├─ ProfileCard.tsx
@@ -71,6 +76,7 @@ move/
 ---
 
 ## 🧊 Upload Media với Walrus (Gợi ý)
+
 ```ts
 import { WalrusClient } from "@mysten/walrus.js";
 const client = new WalrusClient({ network: "testnet" });
@@ -84,6 +90,7 @@ export async function uploadToWalrus(file: File): Promise<string> {
 ---
 
 ## ⛽ Sponsored Gas API (Gợi ý)
+
 ```ts
 import { Transaction } from "@mysten/sui.js";
 
@@ -105,6 +112,7 @@ export async function sendSponsoredTx(wallet, tx) {
 ---
 
 ## 🖥 Trang UI cần có
+
 | Trang             | Chức năng                                           |
 | ----------------- | --------------------------------------------------- |
 | 🏠 Home            | Danh sách builder + verified badge                  |
@@ -117,6 +125,7 @@ export async function sendSponsoredTx(wallet, tx) {
 ---
 
 ## 🧠 Checklist Merge
+
 | Hạng mục                     | Trạng thái |
 | ---------------------------- | ---------- |
 | Move module hoạt động        | ☐          |
