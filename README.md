@@ -1,6 +1,6 @@
 # 🧱 Sui Builder Challenge — DOLPHINDER
 
-## 🧠 Build your on-chain developer profile, showcase your projects, and prove your skills on Sui.
+## 🧠 Build your on-chain developer profile, showcase your projects, and prove your skills on Sui
 
 > Powered by **Sui** 🪙 + **Walrus** 🧊 + **Sponsored Gas** ⛽  
 > Hosted by **SuiHub APAC**
@@ -44,7 +44,40 @@
 
 ---
 
-## 🧱 Cấu trúc dự án (Gợi ý)
+## 🚀 **DEPLOYED TO SUI TESTNET** ✅
+
+**Contract deployed successfully! Ready for testing.**
+
+### **Important Contract IDs**
+
+- **Package ID**:
+`0xcde463d95d04c81e56b8997fbd8378b1006897985760e177ee234f82d7cd68ba`
+- **GlobalRegistry**: `0xe8f02280c428f61e667f10d8493075e376841dbbb09cd6d2b8b12461a9cf2c56`
+- **AdminCap**: `0xddb76187a2ecef1c3968a638665829047f156610748759f67441f04f323ec666`
+- **Admin Address**: `0x06c69714bd8c50f1c2b50f4bf4f8343648d2d72fc12df4dc267ad8636410cdc1`
+
+### **Deployment Details**
+
+- **Network**: Sui Testnet
+- **Transaction**: [9vwJrF2qYrrdN8YdNMdqFhaKKhJF82vFnu42bPFXjQEC](https://testnet.suivision.xyz/txblock/9vwJrF2qYrrdN8YdNMdqFhaKKhJF82vFnu42bPFXjQEC)
+- **Epoch**: 897
+- **Gas Used**: ~38.3 SUI (including storage)
+
+### **Quick Start**
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Connect wallet and test profile creation!
+```
+
+---
+
+## 🧱 Cấu trúc dự án
 
 ```bash
 src/
@@ -128,12 +161,12 @@ export async function sendSponsoredTx(wallet, tx) {
 
 | Hạng mục                     | Trạng thái |
 | ---------------------------- | ---------- |
-| Move module hoạt động        | ☐          |
-| Form hồ sơ, dự án, chứng chỉ | ☐          |
-| Walrus upload OK             | ☐          |
-| Sponsored gas OK             | ☐          |
-| README cập nhật              | ☐          |
-| Test E2E                     | ☐          |
+| Move module hoạt động        | ✅ **DEPLOYED** |
+| Form hồ sơ, dự án, chứng chỉ | ✅ **COMPLETE** |
+| Walrus upload OK             | ✅ **IMPLEMENTED** |
+| Sponsored gas OK             | ✅ **IMPLEMENTED** |
+| README cập nhật              | ✅ **UPDATED** |
+| Test E2E                     | 🔄 **READY FOR TESTING** |
 
 ---
 
